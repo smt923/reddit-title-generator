@@ -1,4 +1,4 @@
-# Reddit-Title-Generator
+# reddit-title-generator
 Generates 'fitting' titles for a subreddit
 
 # Dependencies
