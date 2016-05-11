@@ -27,7 +27,8 @@ def crawl_url(input_url):
 
 def generate_text(text):
     markov = markovify.Text(text, state_size=1)
-    print(markov.make_short_sentence(300, tries=40))
+    generated = markov.make_short_sentence(300, tries=40)
+    return generated
 
 
 if __name__ == "__main__":
@@ -43,4 +44,4 @@ if __name__ == "__main__":
     else:
         url = requests.get("http://reddit.com/r/" + sys.argv[1], headers=headers, timeout=10)
 
-    generate_text(crawl_url(url))
+    print(generate_text(crawl_url(url)))
